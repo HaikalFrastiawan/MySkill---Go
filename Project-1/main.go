@@ -13,7 +13,7 @@ func main() {
 	router.Use(gin.Recovery())
 
 	// Static route
-	router.GET("/hello", func(c *gin.Context) {
+	router.GET("/halo", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "Hello, world",
 		})
@@ -43,7 +43,7 @@ func main() {
 		}
 
 		// Login logic
-		if loginData.Email == "haikalfrastiawan16@gmial.com" && loginData.Password == "123" {
+		if loginData.Email == "haikalfrastiawan16@gmail.com" && loginData.Password == "123" {
 			c.JSON(200, gin.H{
 				"message": "Login succeeded",
 			})
